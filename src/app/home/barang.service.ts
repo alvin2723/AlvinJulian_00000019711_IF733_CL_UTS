@@ -110,7 +110,6 @@ export class BarangService {
 
   hapusBarang(itemId) {
     this.barang = this.barang.filter(item => {
-      console.log(itemId);
       return item.id !== itemId;
     });
   }
