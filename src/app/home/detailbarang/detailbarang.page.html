@@ -1,0 +1,99 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-button slot="start">
+        <ion-back-button defaultHref="/home"></ion-back-button>
+      </ion-button>
+      <ion-title>Detail Barang</ion-title>
+
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="12" size-sm="12">
+        <ion-slides pager="true" [options]="slideOpts" (ionSlideDidChange)="ionSlideChange(slide)">
+          <ion-slide *ngFor="let img of loadedBarang.imageUrl">
+            <ion-img [src]="img">
+            </ion-img>
+          </ion-slide>
+       
+        </ion-slides>
+        
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-md="12" size-sm="12">
+        <h1>{{loadedBarang.merek}} {{loadedBarang.model}}</h1>
+        <h4>{{loadedBarang.harga | currency: 'Rp.':true:'2.0'}} </h4>
+        <h5>Tersedia : {{loadedBarang.stok}}</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1>Tentang Produk</h1>
+        <ion-list>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6" size-md="6" size-sm="12">
+                <ion-item *ngIf="loadedBarang.baseClock !=null">
+                  <ion-icon slot="start" name="timer-outline"></ion-icon>
+                  <ion-label >Base Clock :{{loadedBarang.baseClock}}
+                  </ion-label>
+                </ion-item>
+              </ion-col>
+                <ion-col size="6" size-md="6" size-sm="12">
+                  <ion-item *ngIf="loadedBarang.boostClock !=null">
+                    <ion-icon slot="start" name="timer-outline"></ion-icon>
+                    <ion-label>Boost Clock : {{loadedBarang.boostClock}}</ion-label>
+                  </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6" size-md="6" size-sm="12">
+                
+                  <ion-item *ngIf="loadedBarang.coreCount !=null">
+                    <ion-icon slot="start" name="rocket-outline"></ion-icon>
+                    <ion-label>Core Count :{{loadedBarang.coreCount}}</ion-label>
+                  </ion-item>
+              </ion-col>
+              <ion-col size="6" size-md="6" size-sm="12">
+                  <ion-item *ngIf="loadedBarang.threadCount !=null">
+                    <ion-icon slot="start" name="rocket-outline"></ion-icon>
+                    <ion-label>Thread Count :{{loadedBarang.threadCount}}</ion-label>
+                  </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6" size-md="6" size-sm="12">
+                <ion-item *ngIf="loadedBarang.speed !=null">
+                  <ion-icon slot="start" name="speedometer-outline"></ion-icon>
+                  <ion-label>Speed :{{loadedBarang.speed}}</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col size="6" size-md="6" size-sm="12">
+                <ion-item *ngIf="loadedBarang.ukuran !=null">
+                  <ion-icon slot="start" name="calculator-outline"></ion-icon>
+                  <ion-label>Ukuran :{{loadedBarang.ukuran}}</ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6" size-md="6" size-sm="12">
+                <ion-item *ngIf="loadedBarang.chipset !=null">
+                  <ion-icon slot="start" name="hardware-chip-outline"></ion-icon>
+                  <ion-label>Chipset :{{loadedBarang.chipset}}</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col size="6" size-md="6" size-sm="12">
+                <ion-item *ngIf="loadedBarang.prosesorMerek !=null">
+                  <ion-icon slot="start" name="hardware-chip-outline"></ion-icon>
+                  <ion-label>Prosesor Merek Ditujukan Kepada :{{loadedBarang.prosesorMerek}}
+                  </ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>

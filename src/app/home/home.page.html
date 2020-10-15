@@ -1,0 +1,47 @@
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Home
+      </ion-title>
+      <ion-button slot="end" (click)="listorgrid()" fill="none">
+        <ion-icon [name]="visible ? 'grid-outline' : 'list-outline'"></ion-icon>
+      </ion-button>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content padding>
+    <ion-grid>
+      <ion-row *ngIf="visible">
+        <ion-col size="12" size-md="12" size-sm="12" *ngFor="let brg of barang">
+          <ion-card [routerLink]="['./', brg.id]">
+            <ion-card-content>
+              <ion-list>
+                <ion-item lines="none">
+                  <ion-thumbnail slot="start">
+                    <ion-img [src]="brg.imageUrl[0]" ></ion-img>
+                  </ion-thumbnail>
+                  <ion-label>{{ brg.merek }} {{brg.model}}</ion-label><br>
+                  <ion-label>{{ brg.harga | currency: 'Rp.':true:'2.0' }}</ion-label><br>
+                  <ion-label>Tersedia : {{ brg.stok }}</ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="!visible">
+        <ion-col size="6" size-md="6" size-sm="6" *ngFor="let brg of barang">
+          <ion-card [routerLink]="['./', brg.id]">
+            <ion-img [src]="brg.imageUrl[0]" style="width: 200px; height: 200px; margin: 0 auto;" ></ion-img>
+            <ion-card-content>
+              <h1>{{ brg.merek }} {{brg.model}}</h1>
+              <h4>{{ brg.harga | currency: 'Rp.':true:'2.0' }}</h4>
+              <h5>Tersedia : {{ brg.stok }}</h5>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
