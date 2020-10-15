@@ -116,9 +116,9 @@ export class BarangService {
   }
   tambahBarang(data: FormGroup) {
     const barangId = "b" + (parseInt(this.barang[this.barang.length - 1].id.substring(1)) + 1).toString;
-    const barangBaru = {
+    let barangBaru = {
 
-      id: barangId,
+      id: 'b' + (parseInt(this.barang[this.barang.length - 1].id.substring(1)) + 1).toString(),
       jenis: data.value.jenis,
       merek: data.value.merek,
       model: data.value.model,
