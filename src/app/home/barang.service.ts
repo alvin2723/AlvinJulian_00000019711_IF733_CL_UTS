@@ -21,8 +21,8 @@ export class BarangService {
       speed: null,
       ukuran: null,
       prosesorMerek: null,
-      harga: '123',
-      stok: 1,
+      harga: '2000000',
+      stok: 10,
       imageUrl: ['https://c1.neweggimages.com/ProductImage/19-113-568-V11.jpg', 'https://plecom.imgix.net/iil-197819-636551.jpg?fit=fillmax&fill=solid&fill-color=ffffff&auto=format&w=1000&h=1000'],
 
     },
@@ -39,7 +39,7 @@ export class BarangService {
       speed: '123',
       ukuran: '232',
       prosesorMerek: null,
-      harga: '123',
+      harga: '2800000',
       stok: 12,
       imageUrl: ['https://www.guru3d.com/index.php?ct=news&action=file&id=32892', 'https://www.tweaktown.com/images/news/5/9/59237_02_geil-reveal-asus-certified-evo-rog-rgb-ram_full.jpg']
 
@@ -57,8 +57,8 @@ export class BarangService {
       speed: null,
       ukuran: null,
       prosesorMerek: null,
-      harga: '123',
-      stok: 12,
+      harga: '6800000',
+      stok: 5,
       imageUrl: ['https://m.media-amazon.com/images/I/81XjKeC5uLL.jpg', 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSJ7UMDv4mkfEw1YUV_sSedjHW6n_2_HeWR3Q&usqp=CAU'],
 
     },
@@ -75,8 +75,8 @@ export class BarangService {
       speed: null,
       ukuran: null,
       prosesorMerek: 'sdsdf',
-      harga: '123',
-      stok: 12,
+      harga: '1500000',
+      stok: 8,
       imageUrl: ['https://cdn.alza.co.uk/ImgW.ashx?fd=f3&cd=AG450m7', 'https://images-na.ssl-images-amazon.com/images/I/71XwAAmjQlL._SL1000_.jpg'],
 
     },

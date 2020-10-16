@@ -36,7 +36,7 @@
         <ion-label position="floating">Stok</ion-label>
         <ion-input type="number" [(ngModel)]="editStok"></ion-input>
       </ion-item>
-      <h2>Detail Produk</h2>
+      <h2 *ngIf="loadedBarang.jenis !== 'gpu'">Detail Produk</h2>
       <ion-item *ngIf="loadedBarang.jenis === 'cpu'">
         <ion-label position="floating">Base Clock</ion-label>
         <ion-input type="text" [(ngModel)]="editBaseClock"></ion-input>

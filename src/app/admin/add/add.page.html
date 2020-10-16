@@ -39,39 +39,39 @@
         <ion-label position="floating">Model</ion-label>
         <ion-input type="text" formControlName="model"></ion-input>
       </ion-item>
-      <h4 slot="start">Rp. </h4>
+      
       <ion-item>
-        <ion-label position="floating">Harga</ion-label>
-
-
-        <ion-input type="text" formControlName="harga" style="margin-left: 100px;"></ion-input>
-
+       
+        <ion-label position="floating" >Harga<h4 slot="start">Rp. </h4></ion-label>
+   
+        <ion-input type="text" formControlName="harga" ></ion-input>
+       
       </ion-item>
       <ion-item>
         <ion-label position="floating">Stok</ion-label>
         <ion-input type="number" formControlName="stok"></ion-input>
       </ion-item>
-      <h2>Detail Produk</h2>
-      <ion-item *ngIf="jenis === 'cpu'" >
+      <h2 *ngIf="jenis !== 'gpu'">Detail Produk</h2>
+      <ion-item *ngIf="jenis === 'cpu'">
         <ion-label position="floating">Base Clock</ion-label>
-        <ion-input type="text" formControlName="baseClock"></ion-input>
+        <ion-input type="text" formControlName="baseClock"></ion-input><h3 slot="end">GHz</h3>
       </ion-item>
       <ion-item *ngIf="jenis === 'cpu'" >
         <ion-label position="floating">Boost Clock</ion-label>
-        <ion-input type="text" formControlName="boostClock"></ion-input>
+        <ion-input type="text" formControlName="boostClock"></ion-input><h3 slot="end">GHz</h3>
       </ion-item>
       <ion-item *ngIf="jenis === 'cpu'">
         <ion-label position="floating">Core Count</ion-label>
-        <ion-input type="number" formControlName="coreCount"></ion-input>
+        <ion-input type="number" formControlName="coreCount"></ion-input><h3 slot="end">Core</h3>
       </ion-item>
       <ion-item *ngIf="jenis === 'cpu'">
         <ion-label position="floating">Thread Count</ion-label>
-        <ion-input type="number" formControlName="threadCount"></ion-input>
+        <ion-input type="number" formControlName="threadCount"></ion-input><h3 slot="end">Thread</h3>
       </ion-item> 
       <ion-item *ngIf="jenis === 'ram'">
         <ion-label position="floating">Speed</ion-label>
         <ion-input type="text" formControlName="speed"></ion-input>
-        
+        <h3 slot="end">Mhz</h3>
       </ion-item>
 
       <ion-item *ngIf="jenis === 'ram'">

@@ -30,21 +30,21 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <h1>Tentang Produk</h1>
+        <h1 *ngIf="loadedBarang.jenis !== 'gpu'">Tentang Produk</h1>
         <ion-list>
           <ion-grid>
             <ion-row>
               <ion-col size="6" size-md="6" size-sm="12">
                 <ion-item *ngIf="loadedBarang.baseClock !=null">
                   <ion-icon slot="start" name="timer-outline"></ion-icon>
-                  <ion-label >Base Clock :{{loadedBarang.baseClock}}
+                  <ion-label >Base Clock :{{loadedBarang.baseClock}}  GHz
                   </ion-label>
                 </ion-item>
               </ion-col>
                 <ion-col size="6" size-md="6" size-sm="12">
                   <ion-item *ngIf="loadedBarang.boostClock !=null">
                     <ion-icon slot="start" name="timer-outline"></ion-icon>
-                    <ion-label>Boost Clock : {{loadedBarang.boostClock}}</ion-label>
+                    <ion-label>Boost Clock : {{loadedBarang.boostClock}} GHz</ion-label>
                   </ion-item>
                 </ion-col>
             </ion-row>
@@ -53,13 +53,13 @@
                 
                   <ion-item *ngIf="loadedBarang.coreCount !=null">
                     <ion-icon slot="start" name="rocket-outline"></ion-icon>
-                    <ion-label>Core Count :{{loadedBarang.coreCount}}</ion-label>
+                    <ion-label>Core Count :{{loadedBarang.coreCount}} Core</ion-label>
                   </ion-item>
               </ion-col>
               <ion-col size="6" size-md="6" size-sm="12">
                   <ion-item *ngIf="loadedBarang.threadCount !=null">
                     <ion-icon slot="start" name="rocket-outline"></ion-icon>
-                    <ion-label>Thread Count :{{loadedBarang.threadCount}}</ion-label>
+                    <ion-label>Thread Count :{{loadedBarang.threadCount}} Thread</ion-label>
                   </ion-item>
               </ion-col>
             </ion-row>
@@ -67,13 +67,13 @@
               <ion-col size="6" size-md="6" size-sm="12">
                 <ion-item *ngIf="loadedBarang.speed !=null">
                   <ion-icon slot="start" name="speedometer-outline"></ion-icon>
-                  <ion-label>Speed :{{loadedBarang.speed}}</ion-label>
+                  <ion-label>Speed :{{loadedBarang.speed}} Mhz</ion-label>
                 </ion-item>
               </ion-col>
               <ion-col size="6" size-md="6" size-sm="12">
                 <ion-item *ngIf="loadedBarang.ukuran !=null">
                   <ion-icon slot="start" name="calculator-outline"></ion-icon>
-                  <ion-label>Ukuran :{{loadedBarang.ukuran}}</ion-label>
+                  <ion-label>Ukuran :{{loadedBarang.ukuran}} GB</ion-label>
                 </ion-item>
               </ion-col>
             </ion-row>
